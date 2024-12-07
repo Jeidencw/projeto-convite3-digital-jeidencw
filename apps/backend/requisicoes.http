@@ -1,0 +1,58 @@
+GET http://localhost:4000/eventos
+
+###
+GET http://localhost:4000/eventos/90fec6a3-b9e7-472a-bdd9-522618dec9f7
+
+###
+GET http://localhost:4000/eventos/semana-formacao-dev
+###
+GET http://localhost:4000/eventos/validar/evento-fullstack-2025/90fec6a3-b9e7-472a-bdd9-522618dec9f7
+
+###
+POST http://localhost:4000/eventos/acessar
+Content-Type: application/json
+
+{
+    "id": "b7bc1785-fb09-41c9-a94b-5736ce7f360c",
+    "senha": "senha123"
+}
+
+###
+POST http://localhost:4000/eventos/evento-dev-frontend/convidado
+Content-Type: application/json
+
+{
+    "id": "2f24b3a4-7e27-4391-bef7-30020c6c4b9d",
+    "nome": "Henrique Teste",
+    "email": "teste@convidado.com",
+    "confirmado": true,
+    "possuiAcompanhantes": true,
+    "qtdeAcompanhantes": 5
+}
+
+###
+POST http://localhost:4000/eventos
+Content-Type: application/json
+
+{
+    "id": "2f24b3a4-7e27-4391-bef7-30020c6c4b9d",
+    "alias": "semana-formacao-dev",
+    "nome": "Evento Semena Formação Dev",
+    "data": "2024-12-31T23:00",
+    "local": "São Paulo",
+    "descricao": "Evento de tecnologia",
+    "senha": "frameworks2025",
+    "imagem": "https://play-lh.googleusercontent.com/mpBm6uxkAwCTaDL7us2iG0L-Lpxb6_vUYxJ5dBMSrKFGZoION2lUY5RkJYModzngyIk",
+    "imagemBackground": "https://images.prismic.io/vaultinum/0458a9f1-e149-4037-b9aa-aa4b4fb53c25_propriete-intellectuelle-code-source-protection-compressed.jpg?auto=compress,format&rect=0,0,2400,981&w=2400&h=981",
+    "publicoEsperado": 1000,
+    "convidados": [
+        {
+            "id": "36fb726d-e345-4748-b879-5e27eb890456",
+            "nome": "Henrique Teste",
+            "email": "teste@convidado.com",
+            "confirmado": true,
+            "possuiAcompanhantes": true,
+            "qtdeAcompanhantes": 5
+        }
+    ]
+}
